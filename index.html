@@ -3,6 +3,18 @@
   <title>Sound Board</title>
 </head>
 <body>
-  <p>So test. Much wow.</p>
+  <ul>
+    <li>
+      <a href="#" onclick="play('inception')">Inception</a>
+      <audio id="inception" src="http://inception.davepedu.com/inception.mp3"></audio>
+    </li>
+  </ul>
+  
+  <script type="text/javascript">
+    function play(element) {
+      var v = document.getElementById(element);
+      v.play();
+    }
+  </script>
 </body>
 </html>
