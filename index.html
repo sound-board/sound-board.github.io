@@ -1,36 +1,53 @@
 <html>
-<head>
-  <title>Sound Board</title>
-</head>
-<body>
-  <ul>
-    <li>
-      <a href="#" onclick="play('inception')">Inception</a>
-      <audio id="inception" src="http://inception.davepedu.com/inception.mp3"></audio>
-    </li>
-    <li>
-      <a href="#" onclick="play('tdfw')">Turn Down for What?</a>
-      <audio id="tdfw" src="http://www.td4wbutton.com/assets/audio/td4w.mp3"></audio>
-    </li>
-    <li>
-      <a href="#" onclick="play('shiiiit')">Shiiit</a>
-      <audio id="shiiiit" src="http://shiiiit.com/mp3/shiiiit.mp3"></audio>
-    </li>
-    <li>
-      <a href="#" onclick="play('lawandorderdundun')">Law and Order - Dun Dun</a>
-      <audio id="lawandorderdundun" src="http://www.myinstants.com/media/sounds/dun_dun.mp3"></audio>
-    </li>
-    <li>
-      <a href="#" onclick="play('gg')">GG</a>
-      <audio id="gg" src="https://s3.amazonaws.com/ryanplas/Heroes+of+the+Dorm+-+Grand+Finals+-+UT+Arlington+vs+Arizona+State+University+(1).mp3"></audio>
-    </li>
-  </ul>
-  
-  <script type="text/javascript">
+  <head>
+    <title>Sound Board</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="text-center"><h1>Soundboard</h1></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-xs-6">
+          <audio preload="auto" id="inception">
+            <source src="http://inception.davepedu.com/inception.mp3" type="audio/mpeg">
+          </audio>
+          <button type="button" class="btn btn-lg btn-block" onclick="document.getElementById('inception').play()">Inception</button>
+        </div>
+        <div class="col-md-4 col-xs-6">
+          <audio preload="auto" id="tdfw">
+            <source src="http://www.td4wbutton.com/assets/audio/td4w.mp3" type="audio/mpeg">
+          </audio>
+          <button type="button" class="btn btn-lg btn-block" onclick="document.getElementById('tdfw').play()">Turn Down For What</button>
+        </div>
+        <div class="col-md-4 col-xs-6">
+          <audio preload="auto" id="shiiiit">
+            <source src="http://shiiiit.com/mp3/shiiiit.mp3" type="audio/mpeg">
+          </audio>
+          <button type="button" class="btn btn-lg btn-block" onclick="document.getElementById('shiiiit').play()">Shiiiit</button>
+        </div>
+        <div class="col-md-4 col-xs-6">
+          <audio preload="auto" id="dundun">
+            <source src="http://www.myinstants.com/media/sounds/dun_dun.mp3" type="audio/mpeg">
+          </audio>
+          <button type="button" class="btn btn-lg btn-block" onclick="document.getElementById('dundun').play()">Law and Order - Dun Dun</button>
+        </div>
+        <div class="col-md-4 col-xs-6">
+          <audio preload="auto" id="gg">
+            <source src="https://s3.amazonaws.com/ryanplas/Heroes+of+the+Dorm+-+Grand+Finals+-+UT+Arlington+vs+Arizona+State+University+(1).mp3" type="audio/mpeg">
+          </audio>
+          <button type="button" class="btn btn-lg btn-block" onclick="document.getElementById('gg').play()">GG</button>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript">
     function play(element) {
-      var v = document.getElementById(element);
-      v.play();
+    var v = document.getElementById(element);
+    v.play();
     }
-  </script>
-</body>
+    </script>
+  </body>
 </html>
